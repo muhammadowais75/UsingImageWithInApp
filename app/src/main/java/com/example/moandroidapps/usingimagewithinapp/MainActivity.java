@@ -2,6 +2,7 @@ package com.example.moandroidapps.usingimagewithinapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,9 +18,18 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder = new StringBuilder();
 
         for(int i = 0; i < 10; i++) {
-            stringBuilder.append(strValue + "\n\n");
+            stringBuilder.append(strValue).append("\n\n");
         }
 
         tv.setText(stringBuilder);
+
+
+        //Adding Image on Runtime:
+        ImageView iv = (ImageView) findViewById(R.id.another_image_view);
+        iv.setImageResource(R.drawable.logo1);
+
+
+
+
     }
 }
